@@ -1,0 +1,27 @@
+.container{
+    width:300%; /* # of slides times width of slides */
+    overflow: hidden;
+    height: 360px;
+    display: flex;
+
+}
+
+.slide{
+    background-size: cover;
+    /* margin:5vh 0vw 0vh 2vw; */
+    flex-grow: 1;
+    height: 360px;
+
+}
+
+.slide1{
+    background-image:url('../10-28.png')
+}
+
+.slide2{
+    background-image:url('../slide2.png')
+}
+
+.slide3{
+    background-image:url('../slide3.png')
+}
