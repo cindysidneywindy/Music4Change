@@ -1,21 +1,23 @@
 .container{
     width:300%; /* # of slides times width of slides */
     overflow: hidden;
-    height: 360px;
+    height: 520px;
     display: flex;
 
 }
 
 .slide{
     background-size: cover;
+    background-repeat: no-repeat;
     /* margin:5vh 0vw 0vh 2vw; */
-    flex-grow: 1;
-    height: 360px;
+    flex: 1;
+    height: 490px;
+    overflow: hidden;
 
 }
-
+/* 
 .slide1{
-    background-image:url('../10-28.png')
+    background-image:url('../slide1.png')
 }
 
 .slide2{
@@ -24,4 +26,4 @@
 
 .slide3{
     background-image:url('../slide3.png')
-}
+} */

@@ -1,17 +1,19 @@
 const slides=document.getElementsByClassName("slide");
+const texts = document.getElementById("text");
 let currentSlide= 0;
 
 const SlideButton = document.getElementById("slide-button");
 
 let firstSlide = true;
 
+
 function prevSlide(index) {
-    if (currentSlide < (slides.length)-2){
-            return (index === currentSlide+(slides.length-2));
+    if (currentSlide === 0){
+            return (index === slides.length-1);
 
     }
 
-    return (index=== currentSlide - (slides.length-2));
+    return (index=== currentSlide -1);
 
 
 } 
@@ -22,9 +24,8 @@ let currentOffsets = []
 
 function offsetfunction(){
     for (let i=0; i<slides.length; i++){
-        currentOffsets.push(i*100);
+        currentOffsets.push(-100);
     }
-
 }
 
 
@@ -34,7 +35,7 @@ function changeSlide(){
         if (firstSlide){
             slides[i].style.transition = "transform 0.5s";
             slides[i].style.transform = "translateX(-100%)";
-            offsetfunction();
+            
             
         }
         else{
@@ -56,6 +57,7 @@ function changeSlide(){
             }
         }
     }
+
     firstSlide=false;
     
     currentSlide=currentSlide+1;
@@ -65,5 +67,7 @@ function changeSlide(){
 
     console.log(currentSlide);
 }
+
+offsetfunction();
 
 // SlideButton.addEventListener("click", changeSlide);

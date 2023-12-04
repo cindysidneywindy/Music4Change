@@ -17,3 +17,22 @@ html, body {
   display:flex;
   flex-direction: row;
 }
+
+a{
+  text-decoration: none;
+  color: white;
+
+}
+
+a:hover{
+  color:#d9beba;
+
+}
+
+.img-transition{
+  transition: transform 1s;
+}
+
+.img-transition:hover{
+  transform: scale(1.1, 1.1);
+}
